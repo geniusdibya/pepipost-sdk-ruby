@@ -1,5 +1,7 @@
 ![pepipostlogo](https://pepipost.com/assets/img/pepipost-footLogo.png)
 
+[![Gem Version](https://badge.fury.io/rb/pepipost_gem.svg)](https://badge.fury.io/rb/pepipost_gem)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 [![Twitter Follow](https://img.shields.io/twitter/follow/pepi_post.svg?style=social&label=Follow)](https://twitter.com/pepi_post)
 
 # Official Ruby Gem :gem: for [Pepipost](http://www.pepipost.com/?utm_campaign=GitHubSDK&utm_medium=GithubSDK&utm_source=GithubSDK)
