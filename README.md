@@ -2,8 +2,12 @@
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/pepi_post.svg?style=social&label=Follow)](https://twitter.com/pepi_post)
 
-# Official Pepipost Gem :diamond:
-Pepipost is a cloud-based SMTP relay service that delivers highly personalised transactional emails to the inbox within seconds of your customer’s transaction
+# Official Ruby Gem :gem: for [Pepipost](http://www.pepipost.com/?utm_campaign=GitHubSDK&utm_medium=GithubSDK&utm_source=GithubSDK)
+
+This gem contain methods for easily interacting with the Pepipost Email Sending API to send emails within few seconds.
+
+We are trying to make our libraries a Community Driven. To help us building right things in proper order we would request you to help us by sharing comments, creating new issues or pull request.
+
 
 ## How to Build
 
