@@ -1,5 +1,8 @@
-# Getting started
+![pepipostlogo](https://pepipost.com/assets/img/pepipost-footLogo.png)
 
+[![Twitter Follow](https://img.shields.io/twitter/follow/pepi_post.svg?style=social&label=Follow)](https://twitter.com/pepi_post)
+
+# Official Pepipost Gem :diamond:
 Pepipost is a cloud-based SMTP relay service that delivers highly personalised transactional emails to the inbox within seconds of your customer’s transaction
 
 ## How to Build
