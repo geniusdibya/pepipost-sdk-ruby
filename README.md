@@ -106,7 +106,7 @@ The basic workflow presented here is also applicable if you prefer using a diffe
 
    ![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
-<a href="#steps"></a>
+<a href="steps"></a>
 ## Usage
 
 ```ruby
