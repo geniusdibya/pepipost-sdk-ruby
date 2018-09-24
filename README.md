@@ -8,6 +8,33 @@ This gem contain methods for easily interacting with the Pepipost Email Sending 
 
 We are trying to make our libraries a Community Driven. To help us building right things in proper order we would request you to help us by sharing comments, creating new issues or pull request.
 
+## Table of Content
+* [Installation](#installation)
+* [Sample Example](#sample)
+* [Announcements](#announcements)
+* [Roadmap](#roadmap)
+* [About](#about)
+* [License](#license)
+
+
+<a name="installation"></a>
+## Installation 
+   
+There are two ways of installing this Pepipost gem. You can use either of the below: 
+
+``` gem install pepipost_gem```
+
+Once pepipost_gem is installed, use the sample example to test. 
+
+`OR`
+
+``` git clone https://github.com/pepipost/pepipost-sdk-ruby.git && cd pepipost-sdk-ruby ```
+
+### Prerequisites
+
+* Ruby > 2.0.0 
+* pepipost_gem (if SDK is not used)
+
 
 ## How to Build
 
