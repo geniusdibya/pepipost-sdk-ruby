@@ -22,29 +22,23 @@ We are trying to make our libraries a Community Driven. To help us building righ
    
 There are two ways of installing this Pepipost gem. You can use either of the below: 
 
-``` gem install pepipost_gem```
+``` gem install pepipost_gem``` 
 
 Once pepipost_gem is installed, use the sample example to test. 
 
 `OR`
 
-``` git clone https://github.com/pepipost/pepipost-sdk-ruby.git && cd pepipost-sdk-ruby ```
+Manually generating pepipost gem 
 
-### Prerequisites
+This client library is a Ruby gem which can be compiled and used in your Ruby and Ruby on Rails project. This library requires a few gems from the RubyGems repository
 
-* Ruby > 2.0.0 
-* pepipost_gem (if SDK is not used)
-
-
-## How to Build
-
-This client library is a Ruby gem which can be compiled and used in your Ruby and Ruby on Rails project. This library requires a few gems from the RubyGems repository.
-
-1. Open the command line interface or the terminal and navigate to the folder containing the source code.
-2. Run ``` gem build pepipost_gem.gemspec ``` to build the gem.
-3. Once built, the gem can be installed on the current work environment using ``` gem install pepipost_gem-2.5.0.gem ```
+* Open the command line interface/terminal and navigate to the folder of your choice and run the below commands.
+* ``` git clone https://github.com/pepipost/pepipost-sdk-ruby.git && cd pepipost-sdk-ruby ``` to download and navigate to downloaded folder
+* ``` gem build build pepipost_gem.gemspec ``` to build the gem.
+* ``` gem install pepipost_gem-2.5.0.gem ``` to install pepipost gem
 
 ![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=pepipost_gem-Ruby&workspaceName=pepipost_gem-Ruby&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
+
 
 ## How to Use
 
