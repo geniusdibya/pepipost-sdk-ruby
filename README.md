@@ -10,7 +10,8 @@ We are trying to make our libraries a Community Driven. To help us building righ
 
 ## Table of Content
 * [Installation](#installation)
-* [Sample Example](#sample)
+* [Quick Start](#quickstart)
+* [Sample Example](#steps)
 * [Announcements](#announcements)
 * [Roadmap](#roadmap)
 * [About](#about)
@@ -61,7 +62,7 @@ The basic workflow presented here is also applicable if you prefer using a diffe
 
    ![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
-   In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) 
+     In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) 
    * click ``` OK ```.
 
    ![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
@@ -100,90 +101,74 @@ The basic workflow presented here is also applicable if you prefer using a diffe
    ![Add a new Controller](https://apidocs.io/illustration/ruby?step=addCode2&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
    * A new controller class anmed ``` HelloController ``` will be created in a file named ``` hello_controller.rb ``` containing a method named ``` Index ```.
-   * In this method, copy sample example.
+   * In this method, copy [sample example](#steps).
+   * Run your project.
 
    ![Initialize the library](https://apidocs.io/illustration/ruby?step=addCode3&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
-## How to Test
-
-You can test the generated SDK and the server with automatically generated test
-cases as follows:
-
-  1. From terminal/cmd navigate to the root directory of the SDK.
-  2. Invoke: `bundle exec rake`
-
-## Initialization
-
-### 
-
-API client can be initialized as following.
+<a href="#steps"></a>
+## Usage
 
 ```ruby
+require 'pepipost_gem'
+require 'json'
+include PepipostGem
 
-client = PepipostGem::PepipostGemClient.new
-```
-
-The added initlization code can be debugged by putting a breakpoint in the ``` Index ``` method and running the project in debug mode by selecting ``` Run -> Debug 'Development: TestApp' ```.
-
-![Debug the TestApp](https://apidocs.io/illustration/ruby?step=addCode4&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0&initLine=client%2520%253D%2520PepipostGemClient.new)
-
-
-
-# Class Reference
-
-## <a name="list_of_controllers"></a>List of Controllers
-
-* [EmailController](#email_controller)
-
-## <a name="email_controller"></a>![Class: ](https://apidocs.io/img/class.png ".EmailController") EmailController
-
-### Get singleton instance
-
-The singleton instance of the ``` EmailController ``` class can be accessed from the API Client.
-
-```ruby
+client = PepipostGemClient.new
 email_controller = client.email
-```
-
-### <a name="create_send_email"></a>![Method: ](https://apidocs.io/img/method.png ".EmailController.create_send_email") create_send_email
-
-> *Tags:*  ``` Skips Authentication ``` 
-
-> This Endpoint sends emails with the credentials passed.
-
-
-```ruby
-def create_send_email(api_key = nil,
-                          body = nil); end
-```
-
-#### Parameters
-
-| Parameter | Tags | Description |
-|-----------|------|-------------|
-| api_key |  ``` Optional ```  | Generated header parameter. Example value ='5ce7096ed4bf2b39dfa932ff5fa84ed9ed8' |
-| body |  ``` Optional ```  | The body passed will be json format. |
-
-
-#### Example Usage
-
-```ruby
-api_key = 'api_key'
+api_key = 'api-key-here'
 body = EmailBody.new
 
-result = email_controller.create_send_email(api_key, body)
+body.personalizations = []
+body.personalizations[0] = Personalizations.new
+body.personalizations[0].recipient = 'your-rcpt-email@gmail.com'
 
+body.tags = 'tags'
+body.from = From.new
+body.from.from_email = 'from-email-here@pepipost.com'
+body.from.from_name = 'info'
+body.subject = 'Check1'
+body.content = 'test ruby'
+body.settings = Settings.new
+
+body.settings.footer = 0
+body.settings.clicktrack = 1
+body.settings.opentrack = 1
+body.settings.unsubscribe = 1
+
+begin
+        result = email_controller.create_send_email(api_key, body)
+        puts JSON.pretty_generate(result)
+rescue APIException => ex
+        puts "Caught APIException: #{ex.message}"
+end
 ```
 
-#### Errors
+* Change your api-key and sending domain respectively
+  * **apikey** will be available under Login to Pepipost -> Settings -> Integration  
+  * **Sending Domain** will be available under Login to Pepiost -> Settings -> Sending Domains 
+* Save above file as sendEmail.rb
+* run ``` ruby sendEmail.rb ```
 
-| Error Code | Error Description |
-|------------|-------------------|
-| 405 | Method not allowed |
+<a name="announcements"></a>
+# Announcements
 
+v2.5.0 has been released! Please see the [release notes](https://github.com/pepipost/pepipost-sdk-ruby/releases/) for details.
 
+All updates to this library are documented in our [releases](https://github.com/pepipost/pepipost-sdk-ruby/releases). For any queries, feel free to reach out us at dx@pepipost.com
 
-[Back to List of Controllers](#list_of_controllers)
+<a name="roadmap"></a>
+## Roadmap
 
+If you are interested in the future direction of this project, please take a look at our open [issues](https://github.com/pepipost/pepipost-sdk-ruby/issues) and [pull requests](https://github.com/pepipost/pepipost-sdk-ruby/pulls). We would love to hear your feedback.
+
+<a name="about"></a>
+## About
+pepipost-sdk-ruby library is guided and supported by the [Pepipost Developer Experience Team](https://github.com/orgs/pepipost/teams/pepis/members) .
+This pepipost gem is maintained and funded by Pepipost Ltd. The names and logos for pepipost gem are trademarks of Pepipost Ltd.
+
+<a name="license"></a>
+## License
+This code library was semi-automatically generated by APIMATIC v2.0 and licensed under The MIT License (MIT). 
 
 
