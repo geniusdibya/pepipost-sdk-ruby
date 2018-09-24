@@ -24,11 +24,11 @@ There are two ways of installing this Pepipost gem. You can use either of the be
 
 ``` gem install pepipost_gem``` 
 
-Once pepipost_gem is installed, use the sample example to test. 
+Once pepipost_gem is installed, use the sample example to [send test email](#steps). 
 
-`OR`
+**OR**
 
-Manually generating pepipost gem 
+Manually generate you own pepipost gem 
 
 This client library is a Ruby gem which can be compiled and used in your Ruby and Ruby on Rails project. This library requires a few gems from the RubyGems repository
 
@@ -39,28 +39,36 @@ This client library is a Ruby gem which can be compiled and used in your Ruby an
 
 ![Building Gem](https://apidocs.io/illustration/ruby?step=buildSDK&workspaceFolder=pepipost_gem-Ruby&workspaceName=pepipost_gem-Ruby&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
+<a name="quickstart"></a>
+## Quickstart
 
-## How to Use
+The following section explains how to use the PepipostGem Ruby Gem in a new Rails project using RubyMine&trade;.
 
-The following section explains how to use the PepipostGem Ruby Gem in a new Rails project using RubyMine&trade;. The basic workflow presented here is also applicable if you prefer using a different editor or IDE.
+The basic workflow presented here is also applicable if you prefer using a different editor or IDE.
 
-### 1. Starting a new project
+1. Starting a new project
 
-Close any existing projects in RubyMine&trade; by selecting ``` File -> Close Project ```. Next, click on ``` Create New Project ``` to create a new project from scratch.
+Close any existing projects in RubyMine&trade; by selecting 
+
+* ``` File -> Close Project ```. 
+* Next, click on ``` Create New Project ``` to create a new project from scratch.
 
 ![Create a new project in RubyMine](https://apidocs.io/illustration/ruby?step=createNewProject0&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
-Next, provide ``` TestApp ``` as the project name, choose ``` Rails Application ``` as the project type, and click ``` OK ```.
+* Next, provide ``` TestApp ``` as the project name.
+* Choose ``` Rails Application ``` as the project type.
+* Click ``` OK ```.
 
 ![Create a new Rails Application in RubyMine - step 1](https://apidocs.io/illustration/ruby?step=createNewProject1&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
-In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) and click ``` OK ```.
+In the next dialog make sure that correct *Ruby SDK* is being used (minimum 2.0.0) 
+* click ``` OK ```.
 
 ![Create a new Rails Application in RubyMine - step 2](https://apidocs.io/illustration/ruby?step=createNewProject2&workspaceFolder=pepipost_gem-Ruby&workspaceName=PepipostGem&projectName=pepipost_gem&gemName=pepipost_gem&gemVer=2.5.0)
 
 This will create a new Rails Application project with an existing set of files and folder.
 
-### 2. Add reference of the gem
+2. Add reference of the gem
 
 In order to use the PepipostGem gem in the new project we must add a gem reference. Locate the ```Gemfile``` in the *Project Explorer* window under the ``` TestApp ``` project node. The file contains references to all gems being used in the project. Here, add the reference to the library gem by adding the following line: ``` gem 'pepipost_gem', '~> 2.5.0' ```
 
